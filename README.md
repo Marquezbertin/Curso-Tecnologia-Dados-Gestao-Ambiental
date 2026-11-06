@@ -42,6 +42,7 @@ como ferramenta de investigação, não como atalho.
 | [`08-GUIA-DO-PROFESSOR/`](08-GUIA-DO-PROFESSOR/) | Roteiro, plano B offline, ética e segurança de IA |
 | [`09-REFERENCIAS/`](09-REFERENCIAS/) | Referências científicas e normativas completas |
 | [`10-RECURSOS/`](10-RECURSOS/) | Ferramentas gratuitas, fontes de dados e links |
+| [`11-RESOLUCAO-DOS-EXERCICIOS/`](11-RESOLUCAO-DOS-EXERCICIOS/) | Notebooks resolvidos, comentados e prontos para rodar no Colab |
 
 ---
 
@@ -110,7 +111,8 @@ A matriz completa, com a aplicação prática de cada evidência, está em
 2. Abra [`03-PLANO-DE-ENSINO.md`](03-PLANO-DE-ENSINO.md) e escolha o encontro 1.
 3. Leia o plano do encontro em [`04-ENCONTROS/01-por-que-dados-e-meio-ambiente.md`](04-ENCONTROS/01-por-que-dados-e-meio-ambiente.md).
 4. Abra o notebook [`05-NOTEBOOKS-COLAB/01-primeiros-dados.ipynb`](05-NOTEBOOKS-COLAB/01-primeiros-dados.ipynb) no Colab.
-5. Aplique a rubrica de [`07-AVALIACAO/01-rubrica-avaliacao.md`](07-AVALIACAO/01-rubrica-avaliacao.md).
+5. Confira as respostas em [`11-RESOLUCAO-DOS-EXERCICIOS/`](11-RESOLUCAO-DOS-EXERCICIOS/).
+6. Aplique a rubrica de [`07-AVALIACAO/01-rubrica-avaliacao.md`](07-AVALIACAO/01-rubrica-avaliacao.md).
 
 ---
 

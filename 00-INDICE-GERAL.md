@@ -98,6 +98,7 @@ Planos completos: [`04-ENCONTROS/`](04-ENCONTROS/).
 | `08-GUIA-DO-PROFESSOR/` | professor | Roteiro, plano B e ética de IA |
 | `09-REFERENCIAS/` | todos | Bibliografia científica e normas |
 | `10-RECURSOS/` | todos | Ferramentas e links |
+| `11-RESOLUCAO-DOS-EXERCICIOS/` | professor e aluno | Notebooks resolvidos e comentados, prontos para o Colab |
 
 ---
 
@@ -130,6 +131,7 @@ Planos completos: [`04-ENCONTROS/`](04-ENCONTROS/).
 1. `03-PLANO-DE-ENSINO.md` — o que vamos fazer.
 2. `06-DADOS/README.md` — de onde vêm os dados.
 3. `05-NOTEBOOKS-COLAB/` — abra o notebook do dia.
+4. `11-RESOLUCAO-DOS-EXERCICIOS/` — confira as respostas depois de tentar.
 
 ---
 
@@ -153,6 +155,7 @@ eliminatória. A rubrica de 4 níveis está em
 - Matriz científica — [`02-MATRIZ-CIENTIFICA.md`](02-MATRIZ-CIENTIFICA.md)
 - Planos de aula — [`04-ENCONTROS/`](04-ENCONTROS/)
 - Notebooks — [`05-NOTEBOOKS-COLAB/`](05-NOTEBOOKS-COLAB/)
+- Resoluções — [`11-RESOLUCAO-DOS-EXERCICIOS/`](11-RESOLUCAO-DOS-EXERCICIOS/)
 - Dados — [`06-DADOS/`](06-DADOS/)
 - Avaliação — [`07-AVALIACAO/`](07-AVALIACAO/)
 - Guia do professor — [`08-GUIA-DO-PROFESSOR/`](08-GUIA-DO-PROFESSOR/)

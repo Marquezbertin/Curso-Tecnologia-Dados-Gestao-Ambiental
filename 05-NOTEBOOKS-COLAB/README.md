@@ -10,6 +10,20 @@ Matplotlib e scikit-learn; o Folium é instalado na primeira célula do notebook
 | [`03-ia-classificacao-ambiental.ipynb`](03-ia-classificacao-ambiental.ipynb) | 6 e 9 | Treina árvore de decisão e avalia o erro |
 | [`04-visao-computacional-satelite.ipynb`](04-visao-computacional-satelite.ipynb) | 9 (opcional) | Classifica imagens com modelo pré-treinado |
 
+## Versões resolvidas
+
+Os notebooks com **todas as respostas e comentários** estão em
+[`11-RESOLUCAO-DOS-EXERCICIOS/`](../11-RESOLUCAO-DOS-EXERCICIOS/). Use como gabarito, apoio para
+quem faltou ou referência para o professor. Eles também rodam com **Runtime → Run all** e baixam
+os dados automaticamente.
+
+| Resolução | Notebook original |
+|---|---|
+| [`01-resolucao-primeiros-dados.ipynb`](../11-RESOLUCAO-DOS-EXERCICIOS/01-resolucao-primeiros-dados.ipynb) | 01 |
+| [`02-resolucao-mapas-e-territorio.ipynb`](../11-RESOLUCAO-DOS-EXERCICIOS/02-resolucao-mapas-e-territorio.ipynb) | 02 |
+| [`03-resolucao-ia-classificacao-ambiental.ipynb`](../11-RESOLUCAO-DOS-EXERCICIOS/03-resolucao-ia-classificacao-ambiental.ipynb) | 03 |
+| [`04-resolucao-visao-computacional-satelite.ipynb`](../11-RESOLUCAO-DOS-EXERCICIOS/04-resolucao-visao-computacional-satelite.ipynb) | 04 |
+
 ## Como abrir no Colab
 
 1. Acesse https://colab.research.google.com/
