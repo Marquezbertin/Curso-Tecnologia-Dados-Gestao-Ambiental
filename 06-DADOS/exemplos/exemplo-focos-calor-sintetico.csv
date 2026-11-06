@@ -1,0 +1,145 @@
+ano,mes,municipio,bioma,focos
+2019,1,Municipio Exemplo,Cerrado,17
+2019,1,Municipio Exemplo,Mata Atlantica,0
+2019,2,Municipio Exemplo,Cerrado,15
+2019,2,Municipio Exemplo,Mata Atlantica,9
+2019,3,Municipio Exemplo,Cerrado,0
+2019,3,Municipio Exemplo,Mata Atlantica,14
+2019,4,Municipio Exemplo,Cerrado,19
+2019,4,Municipio Exemplo,Mata Atlantica,0
+2019,5,Municipio Exemplo,Cerrado,30
+2019,5,Municipio Exemplo,Mata Atlantica,10
+2019,6,Municipio Exemplo,Cerrado,22
+2019,6,Municipio Exemplo,Mata Atlantica,27
+2019,7,Municipio Exemplo,Cerrado,55
+2019,7,Municipio Exemplo,Mata Atlantica,21
+2019,8,Municipio Exemplo,Cerrado,73
+2019,8,Municipio Exemplo,Mata Atlantica,43
+2019,9,Municipio Exemplo,Cerrado,65
+2019,9,Municipio Exemplo,Mata Atlantica,44
+2019,10,Municipio Exemplo,Cerrado,79
+2019,10,Municipio Exemplo,Mata Atlantica,28
+2019,11,Municipio Exemplo,Cerrado,60
+2019,11,Municipio Exemplo,Mata Atlantica,30
+2019,12,Municipio Exemplo,Cerrado,67
+2019,12,Municipio Exemplo,Mata Atlantica,0
+2020,1,Municipio Exemplo,Cerrado,32
+2020,1,Municipio Exemplo,Mata Atlantica,9
+2020,2,Municipio Exemplo,Cerrado,11
+2020,2,Municipio Exemplo,Mata Atlantica,29
+2020,3,Municipio Exemplo,Cerrado,7
+2020,3,Municipio Exemplo,Mata Atlantica,31
+2020,4,Municipio Exemplo,Cerrado,6
+2020,4,Municipio Exemplo,Mata Atlantica,10
+2020,5,Municipio Exemplo,Cerrado,18
+2020,5,Municipio Exemplo,Mata Atlantica,4
+2020,6,Municipio Exemplo,Cerrado,40
+2020,6,Municipio Exemplo,Mata Atlantica,18
+2020,7,Municipio Exemplo,Cerrado,58
+2020,7,Municipio Exemplo,Mata Atlantica,5
+2020,8,Municipio Exemplo,Cerrado,91
+2020,8,Municipio Exemplo,Mata Atlantica,35
+2020,9,Municipio Exemplo,Cerrado,92
+2020,9,Municipio Exemplo,Mata Atlantica,27
+2020,10,Municipio Exemplo,Cerrado,71
+2020,10,Municipio Exemplo,Mata Atlantica,75
+2020,11,Municipio Exemplo,Cerrado,45
+2020,11,Municipio Exemplo,Mata Atlantica,12
+2020,12,Municipio Exemplo,Cerrado,33
+2020,12,Municipio Exemplo,Mata Atlantica,27
+2021,1,Municipio Exemplo,Cerrado,32
+2021,1,Municipio Exemplo,Mata Atlantica,28
+2021,2,Municipio Exemplo,Cerrado,9
+2021,2,Municipio Exemplo,Mata Atlantica,0
+2021,3,Municipio Exemplo,Cerrado,2
+2021,3,Municipio Exemplo,Mata Atlantica,19
+2021,4,Municipio Exemplo,Cerrado,17
+2021,4,Municipio Exemplo,Mata Atlantica,0
+2021,5,Municipio Exemplo,Cerrado,23
+2021,5,Municipio Exemplo,Mata Atlantica,29
+2021,6,Municipio Exemplo,Cerrado,65
+2021,6,Municipio Exemplo,Mata Atlantica,28
+2021,7,Municipio Exemplo,Cerrado,59
+2021,7,Municipio Exemplo,Mata Atlantica,15
+2021,8,Municipio Exemplo,Cerrado,57
+2021,8,Municipio Exemplo,Mata Atlantica,37
+2021,9,Municipio Exemplo,Cerrado,78
+2021,9,Municipio Exemplo,Mata Atlantica,46
+2021,10,Municipio Exemplo,Cerrado,61
+2021,10,Municipio Exemplo,Mata Atlantica,23
+2021,11,Municipio Exemplo,Cerrado,46
+2021,11,Municipio Exemplo,Mata Atlantica,16
+2021,12,Municipio Exemplo,Cerrado,47
+2021,12,Municipio Exemplo,Mata Atlantica,0
+2022,1,Municipio Exemplo,Cerrado,20
+2022,1,Municipio Exemplo,Mata Atlantica,18
+2022,2,Municipio Exemplo,Cerrado,30
+2022,2,Municipio Exemplo,Mata Atlantica,7
+2022,3,Municipio Exemplo,Cerrado,20
+2022,3,Municipio Exemplo,Mata Atlantica,0
+2022,4,Municipio Exemplo,Cerrado,3
+2022,4,Municipio Exemplo,Mata Atlantica,0
+2022,5,Municipio Exemplo,Cerrado,42
+2022,5,Municipio Exemplo,Mata Atlantica,25
+2022,6,Municipio Exemplo,Cerrado,45
+2022,6,Municipio Exemplo,Mata Atlantica,61
+2022,7,Municipio Exemplo,Cerrado,55
+2022,7,Municipio Exemplo,Mata Atlantica,38
+2022,8,Municipio Exemplo,Cerrado,71
+2022,8,Municipio Exemplo,Mata Atlantica,34
+2022,9,Municipio Exemplo,Cerrado,99
+2022,9,Municipio Exemplo,Mata Atlantica,57
+2022,10,Municipio Exemplo,Cerrado,50
+2022,10,Municipio Exemplo,Mata Atlantica,32
+2022,11,Municipio Exemplo,Cerrado,61
+2022,11,Municipio Exemplo,Mata Atlantica,40
+2022,12,Municipio Exemplo,Cerrado,23
+2022,12,Municipio Exemplo,Mata Atlantica,0
+2023,1,Municipio Exemplo,Cerrado,1
+2023,1,Municipio Exemplo,Mata Atlantica,12
+2023,2,Municipio Exemplo,Cerrado,11
+2023,2,Municipio Exemplo,Mata Atlantica,10
+2023,3,Municipio Exemplo,Cerrado,0
+2023,3,Municipio Exemplo,Mata Atlantica,0
+2023,4,Municipio Exemplo,Cerrado,0
+2023,4,Municipio Exemplo,Mata Atlantica,10
+2023,5,Municipio Exemplo,Cerrado,28
+2023,5,Municipio Exemplo,Mata Atlantica,25
+2023,6,Municipio Exemplo,Cerrado,49
+2023,6,Municipio Exemplo,Mata Atlantica,19
+2023,7,Municipio Exemplo,Cerrado,72
+2023,7,Municipio Exemplo,Mata Atlantica,29
+2023,8,Municipio Exemplo,Cerrado,59
+2023,8,Municipio Exemplo,Mata Atlantica,30
+2023,9,Municipio Exemplo,Cerrado,64
+2023,9,Municipio Exemplo,Mata Atlantica,13
+2023,10,Municipio Exemplo,Cerrado,69
+2023,10,Municipio Exemplo,Mata Atlantica,40
+2023,11,Municipio Exemplo,Cerrado,51
+2023,11,Municipio Exemplo,Mata Atlantica,22
+2023,12,Municipio Exemplo,Cerrado,44
+2023,12,Municipio Exemplo,Mata Atlantica,42
+2024,1,Municipio Exemplo,Cerrado,24
+2024,1,Municipio Exemplo,Mata Atlantica,7
+2024,2,Municipio Exemplo,Cerrado,5
+2024,2,Municipio Exemplo,Mata Atlantica,5
+2024,3,Municipio Exemplo,Cerrado,0
+2024,3,Municipio Exemplo,Mata Atlantica,2
+2024,4,Municipio Exemplo,Cerrado,13
+2024,4,Municipio Exemplo,Mata Atlantica,28
+2024,5,Municipio Exemplo,Cerrado,35
+2024,5,Municipio Exemplo,Mata Atlantica,25
+2024,6,Municipio Exemplo,Cerrado,31
+2024,6,Municipio Exemplo,Mata Atlantica,30
+2024,7,Municipio Exemplo,Cerrado,42
+2024,7,Municipio Exemplo,Mata Atlantica,34
+2024,8,Municipio Exemplo,Cerrado,72
+2024,8,Municipio Exemplo,Mata Atlantica,28
+2024,9,Municipio Exemplo,Cerrado,95
+2024,9,Municipio Exemplo,Mata Atlantica,46
+2024,10,Municipio Exemplo,Cerrado,44
+2024,10,Municipio Exemplo,Mata Atlantica,43
+2024,11,Municipio Exemplo,Cerrado,51
+2024,11,Municipio Exemplo,Mata Atlantica,30
+2024,12,Municipio Exemplo,Cerrado,45
+2024,12,Municipio Exemplo,Mata Atlantica,26

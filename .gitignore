@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Dados baixados e cache
+06-DADOS/brutos/
+06-DADOS/cache/
+*.zip
+*.nc
+*.tif
+*.tiff
+
+# Saídas geradas
+05-NOTEBOOKS-COLAB/saidas/
+*.png
+!06-DADOS/exemplos/*.csv
+
+# Sistema e editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Segredos
+.env
+*.key
+*.pem
+credenciais*.json

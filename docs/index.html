@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tecnologia, Dados e IA na Gestão Ambiental — Proposta de minicurso gratuito</title>
+  <meta name="description" content="Minicurso gratuito de 20h para o ensino médio: jovens investigam problemas ambientais reais com dados abertos, Python, mapas e inteligência artificial. Proposta para a Secretaria Municipal de Meio Ambiente.">
+  <meta name="theme-color" content="#0f5132">
+  <meta property="og:title" content="Tecnologia, Dados e IA na Gestão Ambiental">
+  <meta property="og:description" content="10 encontros, 20h, gratuito. Dados abertos, Python, mapas e IA com verificação humana.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <svg class="svg-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4c-8 0-14 4-14 11a5 5 0 0 0 5 5c7 0 9-6 9-16z"/><path d="M4 20c3-6 7-9 12-11"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></symbol>
+    <symbol id="i-robot" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M8 12h.01M16 12h.01M9 16h6"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2V5z"/><path d="M8 3v18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2"/><path d="M17 8a3 3 0 0 1 0 6M18 14a4 4 0 0 1 4 4v3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3 8-8 9-5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2l2 7 7 3-7 3-2 7-2-7-7-3 7-3 2-7z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8 14l-2 7 6-3 6 3-2-7"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13 5l-2 14"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+  </svg>
+
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="brand" href="#topo" aria-label="Tecnologia, Dados e IA na Gestão Ambiental — início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg><use href="#i-leaf"></use></svg>
+        </span>
+        <span class="brand-text">
+          <strong>Tecnologia, Dados e IA</strong>
+          <span>na Gestão Ambiental</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="menuPrincipal" aria-label="Abrir menu">
+        <svg class="icon-open"><use href="#i-menu"></use></svg>
+        <svg class="icon-close"><use href="#i-close"></use></svg>
+      </button>
+
+      <nav class="nav" id="menuPrincipal" aria-label="Navegação principal">
+        <a href="#proposta">Proposta</a>
+        <a href="#publico">Público</a>
+        <a href="#aulas">Aulas</a>
+        <a href="#ciencia">Base científica</a>
+        <a href="#ia">IA</a>
+        <a href="#materiais">Materiais</a>
+        <a href="#secretaria">Secretaria</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-small btn-primary nav-cta" href="#secretaria">
+          <svg><use href="#i-arrow"></use></svg>
+          Montar a turma
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="dot"></span>
+            Proposta de minicurso gratuito · Ensino médio
+          </p>
+          <h1>Tecnologia, Dados e <span class="hl">IA</span> na Gestão Ambiental</h1>
+          <p class="lead">
+            Jovens investigam problemas ambientais reais do seu território com dados abertos,
+            Python e inteligência artificial — e apresentam soluções com evidência para a
+            comunidade e para o poder público.
+          </p>
+
+          <div class="badges" aria-label="Resumo do curso">
+            <span class="badge"><svg><use href="#i-clock"></use></svg> 20 horas</span>
+            <span class="badge"><svg><use href="#i-book"></use></svg> 10 encontros</span>
+            <span class="badge"><svg><use href="#i-shield"></use></svg> 100% gratuito</span>
+            <span class="badge"><svg><use href="#i-award"></use></svg> Certificado</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#proposta">
+              Conhecer a proposta
+              <svg><use href="#i-arrow"></use></svg>
+            </a>
+            <a class="btn btn-ghost" href="#aulas">
+              Ver as 10 aulas
+            </a>
+          </div>
+
+          <p class="hero-note">
+            Proposta para a <strong>Secretaria Municipal de Meio Ambiente</strong> ·
+            Versão 1.0 · Material aberto e reaplicável
+          </p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-card">
+            <div class="visual-head">
+              <span class="visual-dot red"></span>
+              <span class="visual-dot yellow"></span>
+              <span class="visual-dot green"></span>
+              <span class="visual-title">painel-do-territorio.csv</span>
+            </div>
+            <svg class="visual-svg" viewBox="0 0 420 300" role="presentation">
+              <defs>
+                <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#16724a" stop-opacity="0.35"/>
+                  <stop offset="100%" stop-color="#16724a" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <rect x="0" y="0" width="420" height="300" fill="#fffdf8"/>
+              <g stroke="#e3e8e2" stroke-width="1">
+                <path d="M40 60h340M40 105h340M40 150h340M40 195h340M40 240h340"/>
+                <path d="M70 40v220M140 40v220M210 40v220M280 40v220M350 40v220"/>
+              </g>
+              <path d="M40 205 L90 180 L140 190 L190 140 L240 155 L290 110 L340 120 L380 80"
+                    fill="none" stroke="#0f5132" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M40 205 L90 180 L140 190 L190 140 L240 155 L290 110 L340 120 L380 80 L380 260 L40 260 Z"
+                    fill="url(#areaFill)" stroke="none"/>
+              <g fill="#0f5132">
+                <circle cx="90" cy="180" r="4"/><circle cx="190" cy="140" r="4"/>
+                <circle cx="290" cy="110" r="4"/><circle cx="380" cy="80" r="5"/>
+              </g>
+              <g transform="translate(292 186)">
+                <rect x="0" y="0" width="96" height="58" rx="10" fill="#0f5132"/>
+                <text x="12" y="23" fill="#d9f2e4" font-size="10" font-family="system-ui, sans-serif">focos de calor</text>
+                <text x="12" y="45" fill="#ffffff" font-size="19" font-weight="700" font-family="system-ui, sans-serif">-18%</text>
+              </g>
+              <g transform="translate(58 86)">
+                <rect x="0" y="0" width="104" height="52" rx="10" fill="#ffffff" stroke="#d8ded7"/>
+                <text x="12" y="21" fill="#5b6b63" font-size="9" font-family="system-ui, sans-serif">área verde mapeada</text>
+                <text x="12" y="41" fill="#0f2b22" font-size="17" font-weight="700" font-family="system-ui, sans-serif">42,6 ha</text>
+              </g>
+            </svg>
+            <div class="visual-foot">
+              <span class="pill pill-green">dados abertos</span>
+              <span class="pill pill-blue">Python</span>
+              <span class="pill pill-amber">IA com verificação</span>
+            </div>
+          </div>
+          <div class="floating-note">
+            <svg><use href="#i-spark"></use></svg>
+            <span>Do dado à decisão</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="trust-bar">
+          <span class="trust-label">Alinhado a</span>
+          <span>BNCC</span>
+          <span>PNEA</span>
+          <span>PNED</span>
+          <span>LGPD</span>
+          <span>ODS 4, 6, 11, 13 e 15</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proposta">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span> O problema e a resposta</p>
+          <h2>O dado ambiental existe. Falta chegar à escola — e virar decisão.</h2>
+          <p class="section-lead">
+            O município já produz e recebe informação sobre clima, água, resíduos, queimadas e uso
+            do solo. O curso transforma essa informação em aprendizagem e em participação cidadã.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card reveal">
+            <span class="card-icon"><svg><use href="#i-globe"></use></svg></span>
+            <h3>O dado não chega</h3>
+            <p>
+              INMET, INPE, MapBiomas e ANA publicam dados abertos de qualidade, mas o aluno médio
+              nunca abriu um CSV desses. Sem mediação, o dado fica no portal.
+            </p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><svg><use href="#i-chart"></use></svg></span>
+            <h3>O número vira opinião</h3>
+            <p>
+              Sem letramento de dados, a correlação vira causa e a manchete vira conclusão. O curso
+              ensina a ler fonte, período, erro e limite.
+            </p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><svg><use href="#i-robot"></use></svg></span>
+            <h3>A IA entra sem critério</h3>
+            <p>
+              O jovem usa chatbot para tudo, mas não verifica resposta, não reconhece viés e não
+              documenta o uso. Aqui a IA é ferramenta com método.
+            </p>
+          </article>
+        </div>
+
+        <div class="callout reveal">
+          <div class="callout-mark"><svg><use href="#i-target"></use></svg></div>
+          <div>
+            <h3>A resposta em uma frase</h3>
+            <p>
+              Cada grupo investiga um problema ambiental real, aprende a ler os dados que já
+              existem, coleta os seus próprios dados e usa Python, mapas e IA para propor uma ação
+              com evidência — apresentada em mostra pública.
+            </p>
+          </div>
+        </div>
+
+        <div class="stats reveal" aria-label="O curso em números">
+          <div class="stat"><strong data-count="20" data-suffix="h">20h</strong><span>carga total</span></div>
+          <div class="stat"><strong data-count="10">10</strong><span>encontros de 2h</span></div>
+          <div class="stat"><strong data-count="30">30</strong><span>alunos por turma</span></div>
+          <div class="stat"><strong data-count="0" data-prefix="R$ ">R$ 0</strong><span>custo para o aluno</span></div>
+          <div class="stat"><strong>6–10</strong><span>projetos por ciclo</span></div>
+          <div class="stat"><strong data-count="80" data-suffix="%">80%</strong><span>meta de conclusão</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="publico">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span> Público-alvo</p>
+          <h2>Feito para o ensino médio — e para a comunidade</h2>
+          <p class="section-lead">
+            Nenhum pré-requisito de programação. Toda atividade tem versão no celular, no
+            computador ou no papel.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card reveal">
+            <span class="card-icon"><svg><use href="#i-users"></use></svg></span>
+            <h3>Estudantes do ensino médio</h3>
+            <p>14 a 18 anos, rede pública e comunidade. O foco é investigar o território e sair com portfólio.</p>
+            <ul class="check-list">
+              <li>Sem experiência prévia</li>
+              <li>Duplas ou trios</li>
+              <li>Projeto desde a primeira semana</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><svg><use href="#i-book"></use></svg></span>
+            <h3>Professores da rede</h3>
+            <p>Podem participar como formação continuada e replicar o curso na própria escola.</p>
+            <ul class="check-list">
+              <li>Material aberto e pronto</li>
+              <li>Plano B offline</li>
+              <li>Rubricas e certificados</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><svg><use href="#i-leaf"></use></svg></span>
+            <h3>Jovens da comunidade</h3>
+            <p>Projetos sociais, EJA e coletivos ambientais. A prioridade é inclusão, não seleção.</p>
+            <ul class="check-list">
+              <li>Gratuito para todos</li>
+              <li>Equidade de gênero e renda</li>
+              <li>Acessibilidade desde o desenho</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="equity reveal">
+          <div class="equity-item"><span class="equity-num">50%</span><span>meta de meninas na turma</span></div>
+          <div class="equity-item"><span class="equity-num">30%</span><span>meta de alunos elegíveis ao CadÚnico</span></div>
+          <div class="equity-item"><span class="equity-num">100%</span><span>de gratuidade — sem mensalidade nem taxa</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="metodologia">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span> Como funciona</p>
+          <h2>Uma aula de 2h com cinco fases claras</h2>
+          <p class="section-lead">
+            O aluno sempre sabe onde está e o que vai entregar. O ciclo é o mesmo em todos os
+            encontros — e cada encontro termina com uma peça do projeto.
+          </p>
+        </div>
+
+        <ol class="timeline reveal">
+          <li>
+            <span class="timeline-num">1</span>
+            <div><h3>Engajar</h3><span class="timeline-time">10 min</span><p>Quiz de recuperação e problema do dia.</p></div>
+          </li>
+          <li>
+            <span class="timeline-num">2</span>
+            <div><h3>Explorar</h3><span class="timeline-time">20 min</span><p>Dados reais, pergunta e hipótese em grupo.</p></div>
+          </li>
+          <li>
+            <span class="timeline-num">3</span>
+            <div><h3>Explicar</h3><span class="timeline-time">15 min</span><p>Conceito necessário, com exemplo do território.</p></div>
+          </li>
+          <li>
+            <span class="timeline-num">4</span>
+            <div><h3>Aplicar</h3><span class="timeline-time">60 min</span><p>Notebook e projeto do grupo, com dica de 30 s.</p></div>
+          </li>
+          <li>
+            <span class="timeline-num">5</span>
+            <div><h3>Avaliar</h3><span class="timeline-time">15 min</span><p>Mostra rápida, feedback e tarefa da semana.</p></div>
+          </li>
+        </ol>
+
+        <div class="micro-evidence reveal">
+          <span class="micro-label">Por que assim?</span>
+          <span class="micro-tag">2/3 de prática — Freeman et al., 2014</span>
+          <span class="micro-tag">Recuperação ativa — Karpicke &amp; Roediger, 2008</span>
+          <span class="micro-tag">Ciclo 5E — Bybee et al., 2006</span>
+          <span class="micro-tag">Construcionismo — Papert, 1980</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="aulas">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow eyebrow-light"><span class="dot"></span> Grade completa</p>
+          <h2>10 encontros, do problema à mostra</h2>
+          <p class="section-lead">
+            Cada aula tem plano minuto a minuto, entregável e uso de IA documentado. Clique em um
+            encontro para abrir o plano completo.
+          </p>
+        </div>
+
+        <div class="lessons">
+          <a class="lesson reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/04-ENCONTROS/01-por-que-dados-e-meio-ambiente.md" target="_blank" rel="noopener">
+            <span class="lesson-num">01</span>
+            <div class="lesson-body">
+              <h3>Por que dados e meio ambiente?</h3>
+              <p>Problema, pergunta e fonte. O grupo escolhe o que investigar.</p>
+              <span class="lesson-deliverable">Entrega: tema + pergunta</span>
+            </div>
+            <span class="lesson-ai">IA: mapa mental</span>
+          </a>
+
+          <a class="lesson reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/04-ENCONTROS/02-primeiros-dados-na-planilha.md" target="_blank" rel="noopener">
+            <span class="lesson-num">02</span>
+            <div class="lesson-body">
+              <h3>Primeiros dados na planilha</h3>
+              <p>Dado, variável e série temporal com dados do INMET.</p>
+              <span class="lesson-deliverable">Entrega: gráfico comentado</span>
+            </div>
+            <span class="lesson-ai">IA: ler o gráfico</span>
+          </a>
+
+          <a class="lesson reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/04-ENCONTROS/03-python-sem-medo-parte-1.md" target="_blank" rel="noopener">
+            <span class="lesson-num">03</span>
+            <div class="lesson-body">
+              <h3>Python sem medo, parte 1</h3>
+              <p>Colab, variável, lista e leitura de erro. Sem decorar sintaxe.</p>
+              <span class="lesson-deliverable">Entrega: script alterado</span>
+            </div>
+            <span class="lesson-ai">IA: tutora de código</span>
+          </a>
+
+          <a class="lesson reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/04-ENCONTROS/04-python-sem-medo-parte-2.md" target="_blank" rel="noopener">
+            <span class="lesson-num">04</span>
+            <div class="lesson-body">
+              <h3>Python sem medo, parte 2</h3>
+              <p>pandas, limpeza, filtro, média e gráfico com Matplotlib.</p>
+              <span class="lesson-deliverable">Entrega: notebook com análise</span>
+            </div>
+            <span class="lesson-ai">IA: revisar código</span>
+          </a>
+
+          <a class="lesson reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/04-ENCONTROS/05-mapas-e-territorio.md" target="_blank" rel="noopener">
+            <span class="lesson-num">05</span>
+            <div class="lesson-body">
+              <h3>Mapas e território</h3>
+              <p>Coordenadas, camadas, MapBiomas e mapa interativo com Folium.</p>
+              <span class="lesson-deliverable">Entrega: mapa com camada</span>
+            </div>
+            <span class="lesson-ai">IA: interpretar mapa</span>
+          </a>
+
+          <a class="lesson reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/04-ENCONTROS/06-queimadas-e-desmatamento.md" target="_blank" rel="noopener">
+            <span class="lesson-num">06</span>
+            <div class="lesson-body">
+              <h3>Queimadas e desmatamento</h3>
+              <p>Série histórica, comparação justa e leitura crítica do INPE.</p>
+              <span class="lesson-deliverable">Entrega: comparação entre anos</span>
+            </div>
+            <span class="lesson-ai">IA: classificar focos</span>
+          </a>
+
+          <a class="lesson reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/04-ENCONTROS/07-coleta-de-dados-na-escola.md" target="_blank" rel="noopener">
+            <span class="lesson-num">07</span>
+            <div class="lesson-body">
+              <h3>Coleta de dados na escola</h3>
+              <p>Amostragem, protocolo, instrumentos e ética de dados.</p>
+              <span class="lesson-deliverable">Entrega: plano + registros</span>
+            </div>
+            <span class="lesson-ai">IA: revisar amostragem</span>
+          </a>
+
+          <a class="lesson reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/04-ENCONTROS/08-analisando-dados-coletados.md" target="_blank" rel="noopener">
+            <span class="lesson-num">08</span>
+            <div class="lesson-body">
+              <h3>Analisando os dados coletados</h3>
+              <p>Limpeza, estatística, comparação e limitações explícitas.</p>
+              <span class="lesson-deliverable">Entrega: análise com limites</span>
+            </div>
+            <span class="lesson-ai">IA: auditar viés</span>
+          </a>
+
+          <a class="lesson reveal lesson-highlight" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/04-ENCONTROS/09-ia-aplicada-ao-meio-ambiente.md" target="_blank" rel="noopener">
+            <span class="lesson-num">09</span>
+            <div class="lesson-body">
+              <h3>IA aplicada ao meio ambiente</h3>
+              <p>Machine learning, visão computacional, matriz de confusão e ficha de modelo.</p>
+              <span class="lesson-deliverable">Entrega: modelo + ficha</span>
+            </div>
+            <span class="lesson-ai">Núcleo de IA</span>
+          </a>
+
+          <a class="lesson reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/04-ENCONTROS/10-do-dado-a-solucao-e-mostra.md" target="_blank" rel="noopener">
+            <span class="lesson-num">10</span>
+            <div class="lesson-body">
+              <h3>Do dado à solução e mostra</h3>
+              <p>Storytelling, pôster, proposta de ação e apresentação pública.</p>
+              <span class="lesson-deliverable">Entrega: pôster + mostra</span>
+            </div>
+            <span class="lesson-ai">IA: ensaiar a fala</span>
+          </a>
+        </div>
+
+        <div class="section-action">
+          <a class="btn btn-light" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/03-PLANO-DE-ENSINO.md" target="_blank" rel="noopener">
+            <svg><use href="#i-doc"></use></svg>
+            Ver plano de ensino completo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ciencia">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span> Base científica</p>
+          <h2>Não é intuição: cada escolha tem uma razão declarada</h2>
+          <p class="section-lead">
+            O curso foi desenhado a partir de evidência publicada sobre aprendizagem, letramento de
+            dados, sensoriamento remoto e IA responsável. A matriz completa está no repositório.
+          </p>
+        </div>
+
+        <div class="science-grid">
+          <article class="science-card reveal">
+            <span class="science-tag">Aprendizagem ativa</span>
+            <h3>2/3 da aula é prática</h3>
+            <p>Freeman et al. (2014) mostraram ganho de desempenho com aprendizagem ativa em relação à exposição passiva.</p>
+          </article>
+          <article class="science-card reveal">
+            <span class="science-tag">Recuperação</span>
+            <h3>Quiz no início, não no fim</h3>
+            <p>Karpicke &amp; Roediger (2008) e Karpicke (2012): recuperar fixa mais do que reler.</p>
+          </article>
+          <article class="science-card reveal">
+            <span class="science-tag">Construcionismo</span>
+            <h3>Projeto desde a semana 1</h3>
+            <p>Papert (1980) e Resnick (2017): aprende-se construindo algo público e significativo.</p>
+          </article>
+          <article class="science-card reveal">
+            <span class="science-tag">Ciclo 5E</span>
+            <h3>Engajar → Explorar → Explicar → Aplicar → Avaliar</h3>
+            <p>Bybee et al. (2006): estrutura didática com evidência para sequências de ciências.</p>
+          </article>
+          <article class="science-card reveal">
+            <span class="science-tag">Leitura crítica</span>
+            <h3>Toda fonte passa por CRAAP e leitura lateral</h3>
+            <p>Blakeslee (2004); Wineburg &amp; McGrew (2019): checar autoria, contexto e outras fontes.</p>
+          </article>
+          <article class="science-card reveal">
+            <span class="science-tag">IA responsável</span>
+            <h3>Ficha de modelo e supervisão humana</h3>
+            <p>Mitchell et al. (2019); Gebru et al. (2021); UNESCO (2021): transparência e auditoria.</p>
+          </article>
+        </div>
+
+        <div class="honesty reveal">
+          <h3>O que o curso não afirma</h3>
+          <ul>
+            <li>Não resolve sozinho o problema ambiental do município: forma jovens capazes de investigar e propor.</li>
+            <li>Não trata IA como oráculo: modelo é aproximação treinada em dados, com erro e viés.</li>
+            <li>Não confunde correlação com causalidade — e ensina o aluno a não confundir.</li>
+            <li>Não usa dados pessoais de alunos em análise ou publicação.</li>
+          </ul>
+        </div>
+
+        <div class="section-action">
+          <a class="btn btn-ghost" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/02-MATRIZ-CIENTIFICA.md" target="_blank" rel="noopener">
+            Ver a matriz científica completa
+            <svg><use href="#i-arrow"></use></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="ia">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span> Inteligência artificial</p>
+          <h2>IA como ferramenta de investigação — não como atalho</h2>
+          <p class="section-lead">
+            O aluno aprende três camadas de IA, sempre com verificação humana, registro do prompt e
+            ficha de modelo. A pergunta central é: <strong>onde o modelo erra e quem é afetado?</strong>
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card card-ia reveal">
+            <span class="card-icon"><svg><use href="#i-spark"></use></svg></span>
+            <h3>1. IA generativa</h3>
+            <p>Assistente para explicar, revisar e organizar. O aluno confere cada número e registra o que aceitou ou descartou.</p>
+            <span class="ia-use">Encontros 1 a 8</span>
+          </article>
+          <article class="card card-ia reveal">
+            <span class="card-icon"><svg><use href="#i-chart"></use></svg></span>
+            <h3>2. Machine learning</h3>
+            <p>Modelo supervisionado que prevê risco de foco de calor. O aluno lê acurácia, matriz de confusão e viés.</p>
+            <span class="ia-use">Encontro 9</span>
+          </article>
+          <article class="card card-ia reveal">
+            <span class="card-icon"><svg><use href="#i-map"></use></svg></span>
+            <h3>3. Visão computacional</h3>
+            <p>Classificação de imagens com modelo pré-treinado ou Teachable Machine. O foco é o erro e o limite.</p>
+            <span class="ia-use">Encontro 9 (opcional)</span>
+          </article>
+        </div>
+
+        <div class="ia-rule reveal">
+          <div>
+            <h3>Regra de ouro</h3>
+            <p>
+              <strong>A IA é assistente. A pessoa é autora, verificadora e responsável.</strong>
+              Nenhum projeto é aceito sem ficha de modelo e registro de uso.
+            </p>
+          </div>
+          <ul class="check-list check-light">
+            <li>Registrar o prompt e a finalidade</li>
+            <li>Conferir todo número na fonte</li>
+            <li>Nunca inserir dados pessoais</li>
+            <li>Documentar erro, viés e grupo afetado</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="materiais">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span> Material didático</p>
+          <h2>Tudo pronto, aberto e reaplicável</h2>
+          <p class="section-lead">
+            Planos de aula, notebooks executáveis, dados de exemplo, rubricas, guia do professor,
+            referências e site. O professor não começa do zero.
+          </p>
+        </div>
+
+        <div class="materials">
+          <a class="material reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/01-PROJETO-PEDAGOGICO.md" target="_blank" rel="noopener">
+            <svg><use href="#i-doc"></use></svg>
+            <div><h3>Projeto pedagógico</h3><p>Justificativa, BNCC, avaliação, LGPD e cronograma.</p></div>
+          </a>
+          <a class="material reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/03-PLANO-DE-ENSINO.md" target="_blank" rel="noopener">
+            <svg><use href="#i-book"></use></svg>
+            <div><h3>Plano de ensino</h3><p>Grade dos 10 encontros, materiais e entregáveis.</p></div>
+          </a>
+          <a class="material reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/tree/main/04-ENCONTROS" target="_blank" rel="noopener">
+            <svg><use href="#i-target"></use></svg>
+            <div><h3>10 planos de aula</h3><p>Roteiro minuto a minuto, fichas e avaliação.</p></div>
+          </a>
+          <a class="material reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/tree/main/05-NOTEBOOKS-COLAB" target="_blank" rel="noopener">
+            <svg><use href="#i-code"></use></svg>
+            <div><h3>Notebooks Colab</h3><p>Python, pandas, Folium, scikit-learn e visão computacional.</p></div>
+          </a>
+          <a class="material reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/tree/main/06-DADOS" target="_blank" rel="noopener">
+            <svg><use href="#i-chart"></use></svg>
+            <div><h3>Dados e dicionário</h3><p>Fontes abertas, exemplos sintéticos e metadados.</p></div>
+          </a>
+          <a class="material reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/tree/main/07-AVALIACAO" target="_blank" rel="noopener">
+            <svg><use href="#i-award"></use></svg>
+            <div><h3>Avaliação</h3><p>Rubrica de 4 níveis, checklist por encontro e certificado.</p></div>
+          </a>
+          <a class="material reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/tree/main/08-GUIA-DO-PROFESSOR" target="_blank" rel="noopener">
+            <svg><use href="#i-users"></use></svg>
+            <div><h3>Guia do professor</h3><p>Roteiro, plano B offline e ética de IA.</p></div>
+          </a>
+          <a class="material reveal" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/tree/main/09-REFERENCIAS" target="_blank" rel="noopener">
+            <svg><use href="#i-globe"></use></svg>
+            <div><h3>Referências</h3><p>Bibliografia científica e normativa comentada.</p></div>
+          </a>
+        </div>
+
+        <div class="notebook-banner reveal">
+          <div>
+            <h3>Os notebooks abrem direto no Colab</h3>
+            <p>Sem instalação, sem cartão de crédito. O aluno faz uma cópia e começa a rodar.</p>
+          </div>
+          <div class="notebook-links">
+            <a class="btn btn-primary btn-small" href="https://colab.research.google.com/github/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/05-NOTEBOOKS-COLAB/01-primeiros-dados.ipynb" target="_blank" rel="noopener">
+              Abrir notebook 01
+            </a>
+            <a class="btn btn-ghost btn-small" href="https://colab.research.google.com/github/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/05-NOTEBOOKS-COLAB/03-ia-classificacao-ambiental.ipynb" target="_blank" rel="noopener">
+              Abrir notebook 03 (IA)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="avaliacao">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span> Avaliação</p>
+          <h2>Formativa, transparente e sem prova eliminatória</h2>
+          <p class="section-lead">
+            O aluno é comparado com o critério, não com o colega. A rubrica é apresentada antes da
+            tarefa e o feedback chega em até 48h.
+          </p>
+        </div>
+
+        <div class="assessment-grid">
+          <div class="weight-card reveal">
+            <span class="weight-num">40%</span>
+            <h3>Processo</h3>
+            <p>Entregas parciais, participação e colaboração ao longo dos 10 encontros.</p>
+            <div class="weight-bar"><span style="width:40%"></span></div>
+          </div>
+          <div class="weight-card reveal">
+            <span class="weight-num">40%</span>
+            <h3>Projeto final</h3>
+            <p>Qualidade da análise, do mapa, do modelo e da proposta de ação.</p>
+            <div class="weight-bar"><span style="width:40%"></span></div>
+          </div>
+          <div class="weight-card reveal">
+            <span class="weight-num">20%</span>
+            <h3>Apresentação</h3>
+            <p>Clareza, domínio do dado e capacidade de responder perguntas na mostra.</p>
+            <div class="weight-bar"><span style="width:20%"></span></div>
+          </div>
+        </div>
+
+        <div class="levels reveal">
+          <div class="level"><span class="level-dot l1"></span><strong>1 · Iniciante</strong><span>Precisa de apoio passo a passo</span></div>
+          <div class="level"><span class="level-dot l2"></span><strong>2 · Em desenvolvimento</strong><span>Executa com consulta</span></div>
+          <div class="level"><span class="level-dot l3"></span><strong>3 · Proficiente</strong><span>Executa e explica com autonomia</span></div>
+          <div class="level"><span class="level-dot l4"></span><strong>4 · Avançado</strong><span>Documenta, ensina e responde</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="secretaria">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span> Parceria</p>
+          <h2>O que a Secretaria recebe e o que pedimos</h2>
+          <p class="section-lead">
+            A proposta foi desenhada para custo zero ao aluno e custo mínimo ao município. O que
+            falta é apoio institucional, espaço e divulgação.
+          </p>
+        </div>
+
+        <div class="partner-grid">
+          <div class="partner-col partner-give reveal">
+            <h3><svg><use href="#i-check"></use></svg> Entregamos</h3>
+            <ul>
+              <li>Curso completo de 20h, com 10 planos de aula e notebooks.</li>
+              <li>Turma formada e acompanhada por professor e monitor.</li>
+              <li>Mostra pública de projetos na escola ou espaço da Secretaria.</li>
+              <li>Relatório agregado do território, sem dados pessoais.</li>
+              <li>Banco de pôsteres e notebooks publicados no GitHub Pages.</li>
+              <li>Material aberto para a rede reaplicar quando quiser.</li>
+              <li>Formação de professores da rede como observadores.</li>
+            </ul>
+          </div>
+          <div class="partner-col partner-ask reveal">
+            <h3><svg><use href="#i-arrow"></use></svg> Pedimos</h3>
+            <ul>
+              <li>Apoio institucional e divulgação nas escolas.</li>
+              <li>Espaço com internet (ou laboratório) para os encontros.</li>
+              <li>Indicação de um ponto focal para articulação.</li>
+              <li>Divulgação nas redes e canais da Prefeitura.</li>
+              <li>Opcional: dados municipais agregados para enriquecer os projetos.</li>
+              <li>Opcional: assinatura conjunta dos certificados.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="zero-cost reveal">
+          <span class="zero-num">R$ 0</span>
+          <div>
+            <h3>O curso funciona com custo zero para o aluno</h3>
+            <p>
+              Ferramentas gratuitas, material aberto e equipe voluntária/cedida. O cenário com
+              qualidade (impressão, coffee break e divulgação) custa cerca de R$ 1.620 e melhora a
+              experiência — não viabiliza o curso.
+            </p>
+          </div>
+        </div>
+
+        <div class="indicators reveal">
+          <h3>Indicadores que vamos medir</h3>
+          <div class="indicator-grid">
+            <div><strong>80%</strong><span>meta de conclusão</span></div>
+            <div><strong>80%</strong><span>presença média</span></div>
+            <div><strong>50%</strong><span>meninas na turma</span></div>
+            <div><strong>30%</strong><span>alunos elegíveis ao CadÚnico</span></div>
+            <div><strong>6–10</strong><span>projetos apresentados</span></div>
+            <div><strong>100%</strong><span>relatório entregue à Secretaria</span></div>
+          </div>
+        </div>
+
+        <div class="roadmap reveal">
+          <h3>Cronograma de implantação</h3>
+          <ol class="roadmap-list">
+            <li><span>Mês -2</span><p>Apresentação à Secretaria, definição de espaço, horário e ponto focal.</p></li>
+            <li><span>Mês -1</span><p>Divulgação nas escolas, inscrições e formação da equipe.</p></li>
+            <li><span>Semana 0</span><p>Acolhimento, teste técnico e contrato de convivência.</p></li>
+            <li><span>Semanas 1–10</span><p>Dez encontros e mostra pública de projetos.</p></li>
+            <li><span>+30 dias</span><p>Relatório agregado, certificados e publicação dos projetos.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="transparencia">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span> Transparência</p>
+          <h2>Dados, ética e proteção de menores</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card reveal">
+            <span class="card-icon"><svg><use href="#i-shield"></use></svg></span>
+            <h3>LGPD e ECA</h3>
+            <p>Minimização de dados, consentimento do responsável e nenhum dado de aluno em repositório público.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><svg><use href="#i-users"></use></svg></span>
+            <h3>Ambiente seguro</h3>
+            <p>Dois adultos por atividade com menores, canal oficial e protocolo de incidente em 24h.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><svg><use href="#i-spark"></use></svg></span>
+            <h3>IA auditável</h3>
+            <p>Registro de prompt, ficha de modelo e revisão humana obrigatória antes de qualquer publicação.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container container-narrow">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span> Perguntas frequentes</p>
+          <h2>O que a Secretaria costuma perguntar</h2>
+        </div>
+
+        <div class="faq reveal">
+          <details>
+            <summary>O curso é realmente gratuito para o aluno?</summary>
+            <p>Sim. Não há mensalidade, taxa de material nem venda de curso ao final. As ferramentas são gratuitas e o material é aberto.</p>
+          </details>
+          <details>
+            <summary>Precisa de laboratório de informática?</summary>
+            <p>Não necessariamente. O curso funciona com celular, computador compartilhado ou papel. O ideal é um espaço com internet, mas o plano B offline garante a aula.</p>
+          </details>
+          <details>
+            <summary>Os alunos precisam saber programar?</summary>
+            <p>Não. Eles começam alterando código pronto no Colab e evoluem para análise própria. O professor também recebe material e plano B.</p>
+          </details>
+          <details>
+            <summary>Como a IA é usada sem virar "cola"?</summary>
+            <p>Cada uso é registrado em ficha (prompt, finalidade e verificação). O aluno precisa conferir números, explicar o que fez e documentar o modelo. A IA é assistente, não autora.</p>
+          </details>
+          <details>
+            <summary>Qual é o produto final?</summary>
+            <p>Um projeto em grupo com análise de dados, mapa, modelo de IA e proposta de ação, apresentado em mostra pública e publicado no GitHub Pages sem dados pessoais.</p>
+          </details>
+          <details>
+            <summary>Como os dados dos alunos ajudam a gestão municipal?</summary>
+            <p>Os diagnósticos agregados (mapa de pontos, consumo da escola, percepção ambiental, comparação com satélite) são entregues em relatório à Secretaria, sem identificação de alunos.</p>
+          </details>
+          <details>
+            <summary>Quantos alunos por turma?</summary>
+            <p>Até 30 alunos, em duplas ou trios, com 1 professor e 1 monitor. A meta é 20 a 30 alunos na turma piloto.</p>
+          </details>
+          <details>
+            <summary>E se a internet cair?</summary>
+            <p>Toda aula tem versão offline: tabelas impressas, mapa em papel, cartões de código e atividade de "o computador sou eu". Nenhuma aula é perdida.</p>
+          </details>
+          <details>
+            <summary>Qual é o custo para a Secretaria?</summary>
+            <p>O cenário base é R$ 0 (espaço cedido, equipe voluntária/cedida e ferramentas gratuitas). O cenário com qualidade custa cerca de R$ 1.620, com impressão, divulgação e coffee break da mostra.</p>
+          </details>
+          <details>
+            <summary>O material pode ser reaplicado por outra escola?</summary>
+            <p>Sim. O conteúdo é aberto (CC BY-NC-SA 4.0) e o código é MIT. Qualquer escola da rede pode usar, adaptar e manter o crédito.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final" id="contato">
+      <div class="container cta-grid">
+        <div class="reveal">
+          <p class="eyebrow eyebrow-light"><span class="dot"></span> Próximo passo</p>
+          <h2>Vamos montar a primeira turma?</h2>
+          <p>
+            Uma conversa de 30 minutos com a Secretaria é suficiente para definir espaço, calendário
+            e ponto focal. O material já está pronto; a turma pode começar no próximo ciclo escolar.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-light" href="mailto:bertinmarquez84@gmail.com?subject=Proposta%20-%20Tecnologia%2C%20Dados%20e%20IA%20na%20Gest%C3%A3o%20Ambiental">
+              <svg><use href="#i-mail"></use></svg>
+              Falar com o proponente
+            </a>
+            <a class="btn btn-outline-light" href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental" target="_blank" rel="noopener">
+              Ver o repositório
+              <svg><use href="#i-arrow"></use></svg>
+            </a>
+          </div>
+        </div>
+        <div class="cta-card reveal">
+          <h3>Resumo para a ata</h3>
+          <ul class="check-list check-light">
+            <li>Minicurso gratuito de 20h, 10 encontros de 2h.</li>
+            <li>Ensino médio, sem pré-requisito de programação.</li>
+            <li>Dados abertos, Python, mapas e IA com verificação.</li>
+            <li>Projeto final apresentado em mostra pública.</li>
+            <li>Custo zero para o aluno; custo mínimo para o município.</li>
+            <li>Material aberto, reaplicável e alinhado à BNCC e à PNEA.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand-footer" href="#topo">
+          <span class="brand-mark" aria-hidden="true"><svg><use href="#i-leaf"></use></svg></span>
+          <span class="brand-text"><strong>Tecnologia, Dados e IA</strong><span>na Gestão Ambiental</span></span>
+        </a>
+        <p class="footer-note">
+          Proposta de minicurso gratuito para o ensino médio. Material aberto, feito para ser
+          copiado, adaptado e reaplicado.
+        </p>
+      </div>
+      <div>
+        <h3>Material</h3>
+        <ul class="footer-links">
+          <li><a href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/01-PROJETO-PEDAGOGICO.md" target="_blank" rel="noopener">Projeto pedagógico</a></li>
+          <li><a href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/02-MATRIZ-CIENTIFICA.md" target="_blank" rel="noopener">Matriz científica</a></li>
+          <li><a href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/03-PLANO-DE-ENSINO.md" target="_blank" rel="noopener">Plano de ensino</a></li>
+          <li><a href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/tree/main/05-NOTEBOOKS-COLAB" target="_blank" rel="noopener">Notebooks</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Transparência</h3>
+        <ul class="footer-links">
+          <li><a href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/08-GUIA-DO-PROFESSOR/03-etica-e-seguranca-ia.md" target="_blank" rel="noopener">Ética e segurança de IA</a></li>
+          <li><a href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/07-AVALIACAO/01-rubrica-avaliacao.md" target="_blank" rel="noopener">Rubrica de avaliação</a></li>
+          <li><a href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/09-REFERENCIAS/01-referencias-cientificas.md" target="_blank" rel="noopener">Referências</a></li>
+          <li><a href="https://github.com/Marquezbertin/Curso-Tecnologia-Dados-Gestao-Ambiental/blob/main/LICENSE" target="_blank" rel="noopener">Licença</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:bertinmarquez84@gmail.com">bertinmarquez84@gmail.com</a></li>
+          <li><a href="https://github.com/Marquezbertin" target="_blank" rel="noopener">github.com/Marquezbertin</a></li>
+          <li><a href="https://marquezbertin.github.io/laboratorio-tech-social/" target="_blank" rel="noopener">Laboratório Tech Social</a></li>
+        </ul>
+        <p class="footer-license">Conteúdo CC BY-NC-SA 4.0 · Código MIT</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>Versão 1.0 · <span id="anoAtual">2026</span></span>
+      <span>Feito para a Secretaria Municipal de Meio Ambiente</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

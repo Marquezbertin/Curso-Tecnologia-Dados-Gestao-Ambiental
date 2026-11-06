@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ícone do curso">
+  <rect width="64" height="64" rx="14" fill="#0f5132"/>
+  <path d="M32 12c8 6 14 13 14 22a14 14 0 0 1-28 0c0-9 6-16 14-22z" fill="#d9f2e4"/>
+  <path d="M32 22v24" stroke="#0f5132" stroke-width="3" stroke-linecap="round"/>
+  <path d="M32 30l7-6M32 37l-7-6" stroke="#0f5132" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="46" cy="18" r="4" fill="#eab308"/>
+</svg>
