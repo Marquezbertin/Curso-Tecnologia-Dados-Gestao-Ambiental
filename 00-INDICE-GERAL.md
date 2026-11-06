@@ -99,6 +99,7 @@ Planos completos: [`04-ENCONTROS/`](04-ENCONTROS/).
 | `09-REFERENCIAS/` | todos | Bibliografia científica e normas |
 | `10-RECURSOS/` | todos | Ferramentas e links |
 | `11-RESOLUCAO-DOS-EXERCICIOS/` | professor e aluno | Notebooks resolvidos e comentados, prontos para o Colab |
+| `12-APOSTILA-DIDATICA/` | professor e aluno | Apostila completa em PDF (28 páginas), diagramada para leigos com explicações de código, gráficos e tabelas |
 
 ---
 

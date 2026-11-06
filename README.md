@@ -43,6 +43,7 @@ como ferramenta de investigação, não como atalho.
 | [`09-REFERENCIAS/`](09-REFERENCIAS/) | Referências científicas e normativas completas |
 | [`10-RECURSOS/`](10-RECURSOS/) | Ferramentas gratuitas, fontes de dados e links |
 | [`11-RESOLUCAO-DOS-EXERCICIOS/`](11-RESOLUCAO-DOS-EXERCICIOS/) | Notebooks resolvidos, comentados e prontos para rodar no Colab |
+| [`12-APOSTILA-DIDATICA/`](12-APOSTILA-DIDATICA/) | **Apostila oficial completa em PDF** (28 págs.), com código explicado linha a linha, tabelas e gráficos para leigos |
 
 ---
 

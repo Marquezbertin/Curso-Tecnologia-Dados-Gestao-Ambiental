@@ -16,6 +16,7 @@ venv/
 # Saídas geradas
 05-NOTEBOOKS-COLAB/saidas/
 *.png
+!12-APOSTILA-DIDATICA/graficos/*.png
 !06-DADOS/exemplos/*.csv
 
 # Sistema e editor
