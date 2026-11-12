@@ -158,3 +158,13 @@ está em [`08-GUIA-DO-PROFESSOR/02-plano-b-offline.md`](08-GUIA-DO-PROFESSOR/02-
 
 **Encontrou um erro científico ou um link quebrado?** Corrija e envie — material didático
 melhora com uso real.
+
+---
+
+## Citação e DOI
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24162710.svg)](https://doi.org/10.5281/zenodo.24162710)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0005--3546--8302-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0009-0005-3546-8302)
+
+- **Zenodo (DOI):** https://doi.org/10.5281/zenodo.24162710
+- **ORCID:** https://orcid.org/0009-0005-3546-8302
